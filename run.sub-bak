@@ -1,0 +1,14 @@
+#!/bin/bash
+#PBS -l walltime=00:10:00
+#PBS -l nodes=1:ppn=12
+#PBS -N mp1
+#PBS -q cse
+#PBS -j oe
+
+cd $PBS_O_WORKDIR
+make
+file1=nopapi
+file2=papi
+./taub_no_papi>${file1}
+
+./taub_with_papi>${file2}

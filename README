@@ -1,0 +1,12 @@
+This is an explanation for the CS420 computer project
+Group member: Fangxiaozhi Yu, Linling Miao, Guanfeng Gao
+
+Things to do:
+(0) The algorithm in the slides is wrong!!!
+(1) Coding and verify the basic, openmp only, MPI only, openmp coupled with MPI
+(2) Varying the parallel thread ans OMP node, compare the results with the basic one
+(3) Change the matrix size to M*N
+
+Process and Records:
+(1) Create the basic gauss seidel and openmp gauss seidel 
+(2) Need to verify the codes-> current result shows the openmp works, however it spends more time than the basic case.

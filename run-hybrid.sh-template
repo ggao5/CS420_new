@@ -1,0 +1,40 @@
+#!/bin/bash
+
+mkdir results-mpi/
+
+mkdir results-mpi/P1/
+cp * results-mpi/P1/
+cd results-mpi/P1/
+sed -i '3s/30/60/' run_hybrid.sub
+sed -i '4s/nodes=2/nodes=1/' run_hybrid.sub
+sed -i '11s/2/1/' run_hybrid.sub
+make
+qsub run_hybrid.sub
+cd ../../
+
+mkdir results-mpi/P2/
+cp * results-mpi/P2/
+cd results-mpi/P2/
+sed -i '4s/nodes=2/nodes=2/' run_hybrid.sub
+sed -i '11s/2/2/' run_hybrid.sub
+make
+qsub run_hybrid.sub
+cd ../../
+
+mkdir results-mpi/P4/
+cp * results-mpi/P4/
+cd results-mpi/P4/
+sed -i '4s/nodes=2/nodes=4/' run_hybrid.sub
+sed -i '11s/2/4/' run_hybrid.sub
+make
+qsub run_hybrid.sub
+cd ../../
+
+mkdir results-mpi/P8/
+cp * results-mpi/P8/
+cd results-mpi/P8/
+sed -i '4s/nodes=2/nodes=8/' run_hybrid.sub
+sed -i '11s/2/8/' run_hybrid.sub
+make
+qsub run_hybrid.sub
+cd ../../

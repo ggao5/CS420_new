@@ -1,0 +1,12 @@
+#!/bin/bash
+#PBS -l walltime=00:30:00
+#PBS -l nodes=2:ppn=1
+#PBS -N cs420_course_project
+#PBS -q cse
+#PBS -j oe
+
+cd $PBS_O_WORKDIR
+
+NUM_RANKS=2
+
+mpirun -np ${NUM_RANKS} -ppn 1 ./taub_hybrid>result
