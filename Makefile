@@ -3,7 +3,7 @@ SHELL=/bin/bash
 MPI_CC=mpiicc
 
 # The array size.
-N= 5000 #need revise to meet the requirement
+N= 10000 #need revise to meet the requirement
 
 # The length where to use the openmpi
 BEGIN_LENGTH_OMP= 1000 #need revise to meet the requirement
@@ -18,7 +18,7 @@ LEFT_BOUNDARY_VALUE=4.3
 RIGHT_BOUNDARY_VALUE=9.2
 
 # Number of threads.
-NUM_THREADS_TAUB=1 #need revise to meet the requirement
+NUM_THREADS_TAUB=12 #need revise to meet the requirement
 
 # Compiler optimization level.
 OPT_LEVEL=-O0 #-qopt-reportP#need revise to meet the requirement
